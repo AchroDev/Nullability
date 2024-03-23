@@ -6,12 +6,23 @@
 
 
 // Using if/else conditionals to perform null checks
-fun main() {
-    val name: String? = "Achro"
+//fun main() {
+//    var name: String? = "Achro"
+//
+//    val lengthOfName = if (name != null) {
+//        name.length
+//    } else {
+//        0
+//    }
+//
+//    println("The number of character in your name is $lengthOfName.")
+//}
 
-    if(name != null) {
-        println("This value is not null")
-    } else {
-        println("This value is null")
-    }
+// Using the "?:" Elvis operator with the "?." Safe-call operator similar to an if/else expression
+fun main() {
+    var name: String? = "Achro"
+
+    val lengthOfName = name?.length ?: 0
+
+    println("The number of character in your name is $lengthOfName.")
 }
